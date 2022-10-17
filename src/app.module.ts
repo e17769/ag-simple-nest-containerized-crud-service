@@ -14,12 +14,16 @@ import entities from './typeorm';
       imports: [ConfigModule],
       useFactory: (configService: ConfigService) => ({
         type: 'postgres',
+        //url: process.env.DATABASE_URL,
+        
         host: configService.get('POSTGRES_HOST'),
         port: +configService.get<number>('POSTGRES_PORT'),
         username: configService.get('POSTGRES_USER'),
         password: configService.get('POSTGRES_PASSWORD'),
         database: configService.get('POSTGRES_DATABASE_NAME'),
+        
         entities: entities,
+        autoLoadEntities:true,
         synchronize: true,
       }),
       inject: [ConfigService],
