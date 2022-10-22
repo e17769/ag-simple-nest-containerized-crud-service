@@ -24,8 +24,9 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-[ORM](https://orkhan.gitbook.io/typeorm) Using TypeORM 
+- [Nest](https://github.com/nestjs/nest) Nestjs containerized CRUD TypeScript starter repository. You can use this as a base for any project you want to use.
+- [ORM](https://orkhan.gitbook.io/typeorm) Using TypeORM 
+- [pgDB-Container](https://github.com/e17769/AG_docker_DB) You can use this repo to creae your postgres DB containrs (optional) 
 
 ## Installation
 
@@ -59,16 +60,16 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+
+
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Author - [Ahmed Gadir](https://ahmedgadir.com)
+- Other projects - [E17769 Repos](https://github.com/e17769)
+- Twitter - [E17759](https://twitter.com/e17769)
+- Linkedin - [Ahmed Gadir](https://www.linkedin.com/in/ahmedgadir/)
+- Nest Website - [https://nestjs.com](https://nestjs.com/)
 
-## License
 
-Nest is [MIT licensed](LICENSE).
