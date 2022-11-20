@@ -1,0 +1,14 @@
+version: '3.5' # We use version 3.5 syntax
+services: # Here we define our service(s)
+  api-service: # The name of the service
+    container_name: ag_Link_API_Container # Container name
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      DATABASE_URL: postgres://root:root@postgres:5432/web_db
+      NODE_EVN: development
+      PORT: 3000
+    ports:
+      - '3000:3000'
