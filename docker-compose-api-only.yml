@@ -6,8 +6,6 @@ services: # Here we define our service(s)
     build:
       dockerfile: Dockerfile
       context: .
-    depends_on:
-      - postgresdb
     environment:
       DATABASE_URL: postgres://root:root@postgres:5432/web_db
       NODE_EVN: development
