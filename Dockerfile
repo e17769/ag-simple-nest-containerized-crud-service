@@ -10,6 +10,9 @@ COPY package*.json ./
 # Install app dependencies
 RUN npm install
 
+#push all the changes to git, then update the package version and repush
+RUN git push && npm version patch && git push
+
 # Bundle app source
 COPY . .
 
