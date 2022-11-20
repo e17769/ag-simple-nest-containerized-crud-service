@@ -6,6 +6,6 @@ export class AppService {
     var fs = require('fs');
     var json = JSON.parse(fs.readFileSync('package.json', 'utf8'));
     var version = json.version;
-    return "<b>Version:</b> " + version; //'Versions 1.0.4';
+    return '<b>Version:</b> ' + version; 
   }
 }
