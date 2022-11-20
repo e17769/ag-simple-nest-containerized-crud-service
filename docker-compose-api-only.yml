@@ -1,19 +1,5 @@
 version: '3.5' # We use version 3.5 syntax
 services: # Here we define our service(s)
-  # postgresdb:
-  #   container_name: pg_db_container
-  #   image: postgres:latest
-  #   restart: always
-  #   environment:
-  #     POSTGRES_USER: root
-  #     POSTGRES_PASSWORD: root
-  #     POSTGRES_DB: web_db
-  #     PGDATA: /var/lib/postgresql/data/pgdata
-  #   ports:
-  #     - "5432:5432"
-  #   volumes:
-  #     - ~/Documents/Dev/docker/pgAdmin/data:/var/lib/postgresql/data/pgdata
-
   api-service: # The name of the service
     container_name: ag_Link_API_Container  # Container name
     restart: always
