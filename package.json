@@ -1,13 +1,14 @@
 {
   "name": "ag-service",
-  "version": "1.0.42",
+  "version": "1.0.43",
   "description": "",
   "author": "",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build",
+    "env": "sh env.sh",
+    "build": "npm run env && nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
