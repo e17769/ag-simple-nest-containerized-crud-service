@@ -1,6 +1,6 @@
 {
   "name": "ag-service",
-  "version": "1.0.43",
+  "version": "1.0.47",
   "description": "",
   "author": "",
   "private": true,
@@ -20,7 +20,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "patch": "git push && npm version patch && git push"
+    "patch": "git push && cat .done.patch.file && npm version patch  && git push"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
