@@ -11,6 +11,10 @@
 - [ORM](https://orkhan.gitbook.io/typeorm) Using TypeORM
 - [pgDB-Container](https://github.com/e17769/AG_docker_DB) You can use this repo to creae your postgres DB containrs (optional)
 
+```
+ ANSI Regular
+```
+
 ## Installation
 
 ```bash
