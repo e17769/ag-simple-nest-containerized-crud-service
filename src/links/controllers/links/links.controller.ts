@@ -34,8 +34,17 @@ export class LinksController {
 
   @Post('hit/:id')
   //@UsePipes(ValidationPipe)
-  linkhits(@Param('id', ParseIntPipe) id: number) {
-    var hit = this.linkService.findLinksById(id);
-    return hit;
+  async linkhits(@Param('id', ParseIntPipe) id: number) {
+    let results = '';
+    try {
+      let hit = await this.linkService.findLinksById(id);
+      hit.hit = hit.hit++;
+      this.linkService.Update(id, hit);
+
+      results = 'Updated to ' + hit.hit;
+    } catch (error) {
+      results = error;
+    }
+    return results;
   }
 }

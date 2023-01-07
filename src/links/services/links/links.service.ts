@@ -1,4 +1,3 @@
-
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { CreateLinkDto } from 'src/links/links.dtos';
@@ -23,6 +22,10 @@ export class LinksService {
       },
       lock: { mode: 'optimistic', version: 1 },
     });
+  }
+
+  Update(id: number, createLinkDto: CreateLinkDto) {
+   return this.linkRepository.update(id, createLinkDto);
   }
 
   getLinks() {
