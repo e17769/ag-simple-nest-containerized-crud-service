@@ -14,15 +14,18 @@ export class AppService {
     trnalsationDto,
   }: {
     trnalsationDto: TranslationDto;
-  }): string {
-    return trnalsationDto.text
-      .split('')
-      .reverse()
-      .map((c) => (c = convertChar(c)))
-      .map((o, index) => {
-        return index & 1 ? o : o.toLocaleUpperCase();
-      })
-      .join('');
+  }): TranslationDto {
+    return new TranslationDto(
+      trnalsationDto.text
+        .trim()
+        .split('')
+        .reverse()
+        .map((c) => (c = convertChar(c)))
+        .map((o, index) => {
+          return index & 1 ? o : o.toLocaleUpperCase();
+        })
+        .join(''),
+    );
   }
 }
 function convertChar(char: string): string {
